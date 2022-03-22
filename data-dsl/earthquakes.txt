@@ -1,0 +1,102 @@
+## 模拟数据
+## 注意 新版的 sort 已经不建议直接 _id 排序了 后面要注意写法，尽量找自己数据中的唯一字段
+
+PUT earthquakes/_bulk
+{"index":{"_id":1}}
+{"id": 1, "time":"2011-06-16","magnitude":1.3,"lon":-116.0902,"lat":33.2253,"depth":9.98,"area":" 10km NNE of Ocotillo Wells"}
+{"index":{"_id":2}}
+{"id": 2, "time":"2011-06-16","magnitude":4.1,"lon":151.363,"lat":-5.75,"depth":10,"area":" New Britain region"}
+{"index":{"_id":3}}
+{"id": 3, "time":"2011-06-16","magnitude":1.4,"lon":-122.5537,"lat":38.3568,"depth":8.45,"area":" Northern California"}
+{"index":{"_id":4}}
+{"id": 4, "time":"2011-06-16","magnitude":1.3,"lon":-117.2235,"lat":33.5963,"depth":10.12,"area":" 5km N of Murrieta"}
+{"index":{"_id":5}}
+{"id": 5, "time":"2011-06-16","magnitude":2.5,"lon":-150.994,"lat":61.636,"depth":68.8,"area":" Southern Alaska"}
+{"index":{"_id":6}}
+{"id": 6, "time":"2011-06-16","magnitude":4.8,"lon":151.387,"lat":-5.921,"depth":10,"area":" New Britain region"}
+{"index":{"_id":7}}
+{"id": 7, "time":"2011-06-16","magnitude":3.8,"lon":172.789,"lat":-43.588,"depth":8.9,"area":" South Island of New Zealand"}
+{"index":{"_id":8}}
+{"id": 8, "time":"2011-06-16","magnitude":1.1,"lon":-122.8135,"lat":38.799,"depth":2.37,"area":" Northern California"}
+{"index":{"_id":9}}
+{"id": 9, "time":"2011-06-16","magnitude":4.9,"lon":151.163,"lat":-5.801,"depth":10,"area":" New Britain region"}
+{"index":{"_id":10}}
+{"id": 10, "time":"2011-06-16","magnitude":4.6,"lon":151.457,"lat":-5.76,"depth":10,"area":" New Britain region"}
+{"index":{"_id":11}}
+{"id": 11, "time":"2011-06-16","magnitude":2.6,"lon":-116.4344,"lat":38.3425,"depth":12,"area":" Nevada"}
+{"index":{"_id":12}}
+{"id": 12, "time":"2011-06-16","magnitude":3.8,"lon":-153.364,"lat":59.667,"depth":113.3,"area":" Southern Alaska"}
+{"index":{"_id":13}}
+{"id": 13, "time":"2011-06-16","magnitude":4.9,"lon":151.138,"lat":-5.961,"depth":10,"area":" New Britain region"}
+{"index":{"_id":14}}
+{"id": 14, "time":"2011-06-16","magnitude":4.9,"lon":151.307,"lat":-5.916,"depth":36.9,"area":" New Britain region"}
+{"index":{"_id":15}}
+{"id": 15, "time":"2011-06-16","magnitude":4.7,"lon":151.196,"lat":-5.803,"depth":35.9,"area":" New Britain region"}
+{"index":{"_id":16}}
+{"id": 16, "time":"2011-06-16","magnitude":2.8,"lon":-178.452,"lat":51.248,"depth":30.7,"area":" Andreanof Islands"}
+{"index":{"_id":17}}
+{"id": 17, "time":"2011-06-16","magnitude":5.1,"lon":151.224,"lat":-5.907,"depth":10,"area":" New Britain region"}
+{"index":{"_id":18}}
+{"id": 18, "time":"2011-06-16","magnitude":4.9,"lon":150.853,"lat":-5.68,"depth":10,"area":" New Britain region"}
+{"index":{"_id":19}}
+{"id": 19, "time":"2011-06-16","magnitude":1.6,"lon":-116.4272,"lat":33.349,"depth":4.17,"area":" 11km NNW of Borrego Springs"}
+{"index":{"_id":20}}
+{"id": 20, "time":"2011-06-16","magnitude":1.5,"lon":-122.7448,"lat":48.4925,"depth":27.54,"area":" San Juan Islands region"}
+{"index":{"_id":21}}
+{"id": 21, "time":"2011-06-16","magnitude":5.3,"lon":151.26,"lat":-5.876,"depth":13.2,"area":" New Britain region"}
+{"index":{"_id":22}}
+{"id": 22, "time":"2011-06-16","magnitude":2.5,"lon":-176.591,"lat":51.611,"depth":43.8,"area":" Andreanof Islands"}
+{"index":{"_id":23}}
+{"id": 23, "time":"2011-06-16","magnitude":4.8,"lon":143.624,"lat":37.841,"depth":35,"area":" off the east coast of Honshu"}
+{"index":{"_id":24}}
+{"id": 24, "time":"2011-06-16","magnitude":5.1,"lon":77.849,"lat":-33.599,"depth":10,"area":" Mid-Indian Ridge"}
+{"index":{"_id":25}}
+{"id": 25, "time":"2011-06-16","magnitude":6.4,"lon":151.04,"lat":-5.928,"depth":16,"area":" New Britain region"}
+{"index":{"_id":26}}
+{"id": 26, "time":"2011-06-15","magnitude":4.1,"lon":126.484,"lat":1.927,"depth":34.2,"area":" Molucca Sea"}
+{"index":{"_id":27}}
+{"id": 27, "time":"2011-06-15","magnitude":1.1,"lon":-120.8063,"lat":35.5507,"depth":4.45,"area":" Central California"}
+{"index":{"_id":28}}
+{"id": 28, "time":"2011-06-15","magnitude":2.8,"lon":-122.7428,"lat":48.4837,"depth":25.82,"area":" San Juan Islands region"}
+{"index":{"_id":29}}
+{"id": 29, "time":"2011-06-15","magnitude":1.3,"lon":-117.0325,"lat":34.23,"depth":0.05,"area":" 8km ENE of Running Springs"}
+{"index":{"_id":30}}
+{"id": 30, "time":"2011-06-15","magnitude":4.6,"lon":143.659,"lat":37.663,"depth":35,"area":" off the east coast of Honshu"}
+{"index":{"_id":31}}
+{"id": 31, "time":"2011-06-15","magnitude":1.3,"lon":-117.033,"lat":34.222,"depth":0.58,"area":" 7km ENE of Running Springs"}
+{"index":{"_id":32}}
+{"id": 32, "time":"2011-06-15","magnitude":1.2,"lon":-118.825,"lat":37.5183,"depth":4.88,"area":" Central California"}
+{"index":{"_id":33}}
+{"id": 33, "time":"2011-06-15","magnitude":4.8,"lon":141.666,"lat":31.511,"depth":30.9,"area":" Izu Islands"}
+{"index":{"_id":34}}
+{"id": 34, "time":"2011-06-15","magnitude":1.7,"lon":-117.0312,"lat":34.2287,"depth":-0.14,"area":" 8km ENE of Running Springs"}
+{"index":{"_id":35}}
+{"id": 35, "time":"2011-06-15","magnitude":1.5,"lon":-117.0348,"lat":34.2185,"depth":-1.23,"area":" 7km E of Running Springs"}
+{"index":{"_id":36}}
+{"id": 36, "time":"2011-06-15","magnitude":1.5,"lon":-117.0283,"lat":34.2243,"depth":0.89,"area":" 8km ENE of Running Springs"}
+{"index":{"_id":37}}
+{"id": 37, "time":"2011-06-15","magnitude":1.9,"lon":-117.0322,"lat":34.227,"depth":0.92,"area":" 7km ENE of Running Springs"}
+{"index":{"_id":38}}
+{"id": 38, "time":"2011-06-15","magnitude":1.7,"lon":-117.0303,"lat":34.2263,"depth":0.14,"area":" 8km ENE of Running Springs"}
+{"index":{"_id":39}}
+{"id": 39, "time":"2011-06-15","magnitude":1.6,"lon":-122.4975,"lat":38.3893,"depth":-0.32,"area":" Northern California"}
+{"index":{"_id":40}}
+{"id": 40, "time":"2011-06-15","magnitude":1.5,"lon":-117.0327,"lat":34.2233,"depth":1.06,"area":" 7km ENE of Running Springs"}
+{"index":{"_id":41}}
+{"id": 41, "time":"2011-06-15","magnitude":1.6,"lon":-117.0297,"lat":34.2222,"depth":0.59,"area":" 8km ENE of Running Springs"}
+{"index":{"_id":42}}
+{"id": 42, "time":"2011-06-15","magnitude":1.4,"lon":-119.4199,"lat":39.5158,"depth":5.9,"area":" Nevada"}
+{"index":{"_id":43}}
+{"id": 43, "time":"2011-06-15","magnitude":1.4,"lon":-117.7923,"lat":36.0007,"depth":0.07,"area":" 12km NE of Little Lake"}
+{"index":{"_id":44}}
+{"id": 44, "time":"2011-06-15","magnitude":1.6,"lon":-117.7933,"lat":36.0047,"depth":0.2,"area":" 13km NE of Little Lake"}
+{"index":{"_id":45}}
+{"id": 45, "time":"2011-06-15","magnitude":1.4,"lon":-122.794,"lat":38.8222,"depth":2.57,"area":" Northern California"}
+{"index":{"_id":46}}
+{"id": 46, "time":"2011-06-15","magnitude":1.1,"lon":-122.7905,"lat":38.8238,"depth":1.04,"area":" Northern California"}
+{"index":{"_id":47}}
+{"id": 47, "time":"2011-06-15","magnitude":4.4,"lon":-18.803,"lat":79.21,"depth":10,"area":" eastern Greenland"}
+{"index":{"_id":48}}
+{"id": 48, "time":"2011-06-15","magnitude":1.3,"lon":-117.032,"lat":34.2278,"depth":0.37,"area":" 7km ENE of Running Springs"}
+{"index":{"_id":49}}
+{"id": 49, "time":"2011-06-15","magnitude":1.1,"lon":-117.0298,"lat":34.2272,"depth":0.88,"area":" 8km ENE of Running Springs"}
