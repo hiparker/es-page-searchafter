@@ -55,22 +55,7 @@ export default {
       queryForm: {
         "tes": 123
       },
-      page: {},
-      page1: {
-        currentPage: 1,
-        pageSize: 10,
-        total: 2
-      },
-      tableData: [
-        {
-          time: '2016-05-02',
-          magnitude: 8,
-          lon: 1111.11,
-          lat: 1111.11,
-          depth: 8,
-          area: '测试'
-        }
-      ]
+      page: {}
     }
   },
   mounted () {
