@@ -12,7 +12,7 @@
         </el-table-column>
         <el-table-column
           prop="magnitude"
-          label="地址等级"
+          label="地震等级"
           width="180">
         </el-table-column>
         <el-table-column
