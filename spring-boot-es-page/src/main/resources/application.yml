@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-boot-es-page
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  #json 时间戳统一转换
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  #开启aop
+  aop:
+    proxy-target-class: true
+
+# Elasticsearch 配置
+elastic:
+  auth-enable: true
+  sniff-enable: true
+  username: "elastic"
+  password: "123456"
+  hosts:
+    - "10.0.0.28:9200"
