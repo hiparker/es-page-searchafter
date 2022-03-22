@@ -31,6 +31,8 @@ public class PageController {
 
 	/**
 	 * 查询 注意 前端传入的 参数是 searchAfter ☆☆☆ 且不是必填
+	 * 最好 ES 的 size 是前端 需要的 pageSize 的倍数 2-10倍 ☆☆☆
+	 *
 	 * @param searchAfterStr 参数字符串
 	 * @return ResponseEntity<?>
 	 */
