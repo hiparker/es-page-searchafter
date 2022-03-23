@@ -32,7 +32,7 @@ esPage.init = function (queryForm, callback) {
   this._applyCallback()
 
   // 刷新当前data数据
-  return esPage._updateData(1)
+  return esPage._updateData(this.content.currentPage)
 }
 
 /**
