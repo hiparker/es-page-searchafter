@@ -31,18 +31,8 @@ esPage.init = function (queryForm, callback) {
   // 执行回调查询数据
   this._applyCallback()
 
-  let pageNo = 1
-  let end = pageNo * this.content.pageSize
-  let begin = end - this.content.pageSize
-  // 如果还得等于最后一页 则返回最后一页数据
-  if (pageNo === this.content.count) {
-    end = this._data.length
-    begin = end - this.content.pageSize
-  }
-
-  this.content.currentPage = pageNo
-  this.content.data = this._data.slice(begin, end)
-  return this.content.data
+  // 刷新当前data数据
+  return esPage._updateData(1)
 }
 
 /**
