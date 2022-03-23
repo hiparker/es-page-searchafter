@@ -29,7 +29,7 @@ esPage.init = function (queryForm, callback) {
 
   // 初始化分页
   // 执行回调查询数据
-  this.applyCallback()
+  this._applyCallback()
 
   let pageNo = 1
   let end = pageNo * this.content.pageSize
@@ -104,32 +104,19 @@ esPage.currentChange = function (pageNo) {
         this.content.queryForm[this.searchAfter] =
           this._data[this._data.length - 1].sort.join(",")
         // 执行回调查询数据
-        this.applyCallback()
+        this._applyCallback()
       }
     }
   }
 
-  let end = pageNo * this.content.pageSize
-  let begin = end - this.content.pageSize
-  // 如果还得等于最后一页 则返回最后一页数据
-  if (pageNo === this.content.count) {
-    end = this._data.length
-    begin = end - this.content.pageSize
-    // 如果有余数 则需要展示余数页
-    if (this._data.length % this.content.pageSize > 0) {
-      begin = end - (this._data.length % this.content.pageSize)
-    }
-  }
-
-  this.content.currentPage = pageNo
-  this.content.data = this._data.slice(begin, end)
-  return this.content.data
+  // 刷新当前data数据
+  return esPage._updateData(pageNo)
 }
 
 /**
  * 计算分页数量
  */
-esPage.calculateCount = function () {
+esPage._calculateCount = function () {
   let count = this._data.length / this.content.pageSize
   if (this._data.length % this.content.pageSize > 0) {
     count += 1
@@ -140,12 +127,12 @@ esPage.calculateCount = function () {
 /**
  * 执行回调函数
  */
-esPage.applyCallback = function () {
+esPage._applyCallback = function () {
   // 注意 这里需要拼接 ES特殊查询法
   // 执行回调查询数据
   if (this.content.callback != null) {
     this.content.callback(this.content.queryForm,
-      esPage.passiveCallback)
+      esPage._passiveCallback)
   }
 }
 
@@ -153,30 +140,43 @@ esPage.applyCallback = function () {
  * 被动回调函数
  * 这里不能用 this
  */
-esPage.passiveCallback = function (dataList) {
+esPage._passiveCallback = function (dataList) {
   if (dataList != null && dataList.length > 0) {
     // 增加分页总条数
     esPage.content.total += dataList.length
     // 合并数组
     esPage._data = esPage._data.concat(dataList)
     // 重新计算分页数量
-    esPage.content.count = esPage.calculateCount()
+    esPage.content.count = esPage._calculateCount()
 
     // 刷新当前data数据
-    let end = esPage.content.currentPage * esPage.content.pageSize
-    let begin = end - esPage.content.pageSize
-    // 如果还得等于最后一页 则返回最后一页数据
-    if (esPage.content.currentPage === esPage.content.count) {
-      end = esPage._data.length
-      begin = end - esPage.content.pageSize
-      // 如果有余数 则需要展示余数页
-      if (esPage._data.length % esPage.content.pageSize > 0) {
-        begin = end - (esPage._data.length % esPage.content.pageSize)
-      }
-    }
-    esPage.content.data = esPage._data.slice(begin, end)
+    esPage._updateData(esPage.content.currentPage)
   }
 }
+
+/**
+ * 更新数据
+ * 这里不能用 this
+ */
+esPage._updateData = function (pageNo) {
+  // 刷新当前data数据
+  let end = pageNo * esPage.content.pageSize
+  let begin = end - esPage.content.pageSize
+  // 如果还得等于最后一页 则返回最后一页数据
+  if (pageNo === esPage.content.count) {
+    end = esPage._data.length
+    begin = end - esPage.content.pageSize
+    // 如果有余数 则需要展示余数页
+    if (esPage._data.length % esPage.content.pageSize > 0) {
+      begin = end - (esPage._data.length % esPage.content.pageSize)
+    }
+  }
+
+  esPage.content.currentPage = pageNo
+  esPage.content.data = esPage._data.slice(begin, end)
+  return esPage.content.data
+}
+
 
 module.exports = {
   esPage
